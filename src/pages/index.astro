@@ -1,0 +1,145 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Project from '../components/Project.astro';
+import ProjectDetail from '../components/ProjectDetail.astro';
+
+const startCareer = 2022;
+const experience = new Date().getFullYear() - startCareer;
+---
+
+<Layout title="| Twochel">
+	<main>
+		<!--================ Start Home Banner Area =================-->
+		<section class="home_banner_area" id="home">
+			<div class="banner_inner">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8">
+							<div class="banner_content">
+								<h3 class="text-uppercase">Hi</h3>
+								<h1 class="text-uppercase">I am Rizki Lutfiandi</h1>
+								<h5 class="text-uppercase">Owner Twochel</h5>
+								<div class="d-flex align-items-center">
+									<a class="primary_btn" href="#contact"><span>Get In Touch</span></a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="profile_img">
+								<img class="img-fluid" src="img/banner/home-right.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</section>
+		<!--================ End Home Banner Area =================-->
+
+		<!--================ Start About Us Area =================-->
+		<section class="about_area" id="about">
+			<div class="container">
+				<div class="row justify-content-start">
+					<div class="col-lg-5">
+						<div class="about_img">
+							<img src="img/about-us.png" alt="">
+						</div>
+					</div>
+
+					<div class="offset-lg-1 col-lg-5">
+						<div class="main_title text-left">
+							<h2>let’s <br>
+								Introduce about <br>
+								myself</h2>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nobis tempora dolores voluptatibus! Vitae, optio aliquam dicta, sed harum nihil impedit exercitationem delectus explicabo ipsa est? Doloremque recusandae officiis perferendis.
+							</p>
+							<a class="primary_btn" target="_blank" href="https://drive.google.com/file/d/1819edIJrwk-8FUk16GIOV1jeHSvIpLON/view?usp=sharing"><span>Download CV</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--================ End About Us Area =================-->
+
+		<!--================ Start Projects Area =================-->
+		<section class="projects_area" id="projects">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-8 text-center">
+						<div class="main_title">
+							<h2>Projects</h2>
+						</div>
+					</div>
+				</div>
+
+				<div class="row justify-content-center">
+
+					<Project 
+						title="SIJAKA" 
+						img="/img/portfolio/sijaka.png"
+						about="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nobis tempora dolores voluptatibus! Vitae, optio aliquam dicta, sed harum nihil impedit exercitationem delectus explicabo ipsa est? Doloremque recusandae officiis perferendis."
+						stacks= {["PHP","HTML","CSS","JavaScript","Bootstrap","MySQL"]}
+						website="#"
+						github=""
+					/>
+
+					
+					
+				</div>
+
+			</div>
+		</section>
+		<!--================ End Projects Area =================-->
+
+		<!--================ Start Contact Area =================-->
+		<section class="contact-area" id="contact">
+			<div class="container">
+				<div class="row justify-content-center align-items-center">
+					<div class="col-12 col-sm-12 col-md-8">
+						<div class="main_title">
+							<h2>CONTACT</h2>
+						</div>
+
+						<div class="card p-4 shadow border-0">
+							<form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbxyvFqetMIZwdUTU2dw_vwYnVYcGrlTOEDIfBE5/exec">
+								<div class="form-group">
+									<label for="name">Email:</label>
+									<input id="form-email" class="form-control col-12" placeholder="Enter Your Email" type="email" name="email" required>
+								</div>
+	
+								<div class="form-group">
+									<label for="name">Name:</label>
+									<input id="form-name" class="form-control col-12" placeholder="Enter Your Name" type="text" name="name" required>
+								</div>
+	
+								<div class="form-group">
+									<label for="name">Message:</label>
+									<textarea id="form-message" class="form-control col-12" placeholder="Enter Your Message" rows="8" name="message" required></textarea>
+								</div>
+	
+								<button class="primary_btn float-right mt-1 btn-block" type="submit">
+									<span>Send Message</span>
+								</button>
+							</form>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--================ End Newsletter Area =================-->
+		
+		<ProjectDetail />
+	</main>
+</Layout>
+
+<script is:inline type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+
+<script type="text/javascript">
+	(function(){
+	   emailjs.init("JUMAkpW3rGZb8oU_U");
+	})();
+ </script>
